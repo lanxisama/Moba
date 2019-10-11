@@ -71,7 +71,7 @@
     <div>
       
       <m-list-card icon="menu" title="新闻资讯" :categories="newsCats">
-          <!-- 表示和name为item的插槽关联 -->
+          <!-- 表示和name为item的插槽关联  #为v-slot的简写 也可写作v-slot:item={{category}} 这里面的category名字可以自定义-->
           <template #item="{category}"> 
             <router-link tag="div" :to="`/articles/${news._id}`" class="py-2 fs-lg d-flex" v-for="(news,i) in category.newsList":key="i">
                 <span class="text-info">[{{news.categoryName}}]</span>

@@ -83,7 +83,8 @@
           
       </m-list-card>
       <m-list-card icon="card-hero" title="英雄列表" :categories="heroCats">
-          <!-- 表示和name为item的插槽关联 -->
+          <!-- 表示和name为item的插槽关联  #为v-slot的简写 也可写作v-slot:item={{category}}-->
+          
           <template #item="{category}"> 
             <div class="d-flex flex-warp" style="margin:0 -0.5rem;">
                   <router-link :to="`/heroes/${hero._id}`" tag="div" class="p-2 text-center" style="width:20%;" v-for="(hero,i) in category.heroList":key="i">
